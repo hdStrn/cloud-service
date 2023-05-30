@@ -46,7 +46,7 @@
 строку VUE_APP_BASE_URL=http://localhost:8080  
 
 ### Учетные данные для входа
-+ @user@netology.ru, pass - имеет доступ только к скачиванию и просмотру файлов  
-+ @admin@netology.ru, pass - имеет доступ ко всему функционалу
++ user@netology.ru, pass - имеет доступ только к скачиванию и просмотру файлов  
++ admin@netology.ru, pass - имеет доступ ко всему функционалу
 
 Enjoy!
