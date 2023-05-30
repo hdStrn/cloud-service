@@ -1,0 +1,27 @@
+version: "3.7"
+services:
+  cloud_service:
+    build: .
+    restart: on-failure
+    ports:
+      - 8080:8080
+    networks:
+      - cloud-net
+    environment:
+      - spring.datasource.url=jdbc:mysql://mysqldb:3306/cloud_service
+    depends_on:
+      - mysqldb
+
+  mysqldb:
+    image: "mysql:8.0"
+    ports:
+      - 3307:3306
+    networks:
+      - cloud-net
+    environment:
+      MYSQL_DATABASE: cloud_service
+      MYSQL_USER: bestuser
+      MYSQL_PASSWORD: bestuser
+      MYSQL_ROOT_PASSWORD: root
+networks:
+  cloud-net:
